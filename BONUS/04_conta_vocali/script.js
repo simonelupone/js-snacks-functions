@@ -4,19 +4,23 @@ const word = 'javascript';
 
 
 // Dichiara la funzione qui.
-function countVowels(word) {
+// function countVowels(string) {
+//     const vowels = ['a', 'e', 'i', 'o', 'u'];
+//     let count = 0;
+//     for (let i = 0; i < string.length; i++) {
+//         if (vowels.includes(string[i])) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+const countVowels = (string) => {
     const vowels = ['a', 'e', 'i', 'o', 'u'];
-    let count = 0;
-    for (let i = 0; i < word.length; i++) {
-        if (vowels.includes(word[i])) {
-            count++;
-        }
-    }
-    return count;
-}
+    return string.split('').filter(char => vowels.includes(char)).length;
+};
 
 // Invoca la funzione qui e stampa il risultato in console
 console.log(countVowels(word));
-
 
 //Risultato atteso se si passa 'javascript': 3 (a, a, i)
