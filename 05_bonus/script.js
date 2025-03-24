@@ -9,9 +9,19 @@ const name = 'Mario';
 
 
 // Dichiara la funzione qui.
-
+function greet(string) {
+    const currentTime = new Date().getHours();
+    if (currentTime < 13) {
+        return `Buongiorno ${string}!`;
+    } else if (currentTime > 13 && currentTime <= 17) {
+        return `Buon pomeriggio ${string}!`;
+    } else if (currentTime > 17) {
+        return `Buona sera ${string}!`;
+    }
+}
 
 // Invoca la funzione qui e stampa il risultato in console
+console.log(greet(name));
 
 
 
